@@ -1,0 +1,9 @@
+//Copyright 2011 quarkonium http://www.quarkonium.com 
+//Released under the MIT License
+
+===============================================================================
+Release version 1.0
+
+This is a javascript and jquery implementation of a computer tictactoe game. It uses a simple decision tree to select moves. You can play first by simply selecting a square or make the computer start by pressing the Play button. Reset clears clears the board for a new game.
+
+There are two output boxes, one gives a series of log statements that show the computer's ananlysis and decision making. One output for the game result.
