@@ -1,5 +1,7 @@
-//Copyright 2011 quarkonium http://www.quarkonium.com 
-//Released under the MIT License
+body
+{
+  margin: 60px;
+}
 
 #board { align: centre; border:5px solid #333; width: 400px }
 #board td 
@@ -16,6 +18,8 @@
   width:150px;
 }
 
+div { width: 300px; float: left}
+
 #board tr:nth-child(odd) td:nth-child(even),
 #board tr:nth-child(even) td:nth-child(odd) 
 {
@@ -26,13 +30,7 @@
   -moz-box-shadow:inset 0 0 10px rgba(0,0,0,.4);
   -webkit-box-shadow:inset 0 0 10px rgba(0,0,0,.4);
 }
-/* 
-body {
-  text-align: center;
-  align: center;
-}
-*/
- 
+
 td {
   height: 200px;
   width: 200px;
@@ -49,6 +47,27 @@ td {
 }
  
 #play_again {
-  font-size: 20px;
+  font-size: 14px;
   color: green;
+}
+
+div#control_panel
+{
+  //background:-moz-linear-gradient(top, #00ccff, #ffffff);
+  margin: 30px; 
+  //border: solid 1px; 
+  //-moz-border-radius:15%;
+  //-webkit-border-radius:15%;
+}
+
+button#start, #reset
+{
+  border:none;
+  padding:4px 4px 4px 4px;
+  border-radius:15%; /* Don't expect this to work on IE6 or 7 */
+  -moz-border-radius:15%;
+  -webkit-border-radius:15%;
+  color: blue;
+  margin-right:10px;
+  cursor:pointer;
 }
