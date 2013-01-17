@@ -1,25 +1,44 @@
 <!DOCTYPE html>
-<!-- Copyright 2011 quarkonium http://www.quarkonium.com -->
-<!-- Released under the MIT License -->
-<head>
+<html>
+
+<head>	
+  <title>Quarkonium</title>
+  <META name="description" content="Experienced software engineer specialising in mathematical modeling and artificial intelligence.">
   <link href="css/style.css" rel="stylesheet" type="text/css">
+  <link href="css/tabs.css" rel="stylesheet" type="text/css">
+
+  <script type="text/javascript" src="js/google-code-prettify/prettify.js"></script>
+
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js"></script>
+
   <script src="js/engine.js"></script>
   <script src="js/tictactoe.js"></script>
 </head>
+
 <body>
-  <div id="board">
-  </div>	
-  <div id="control_panel"> 
-    <p>Press the 'Play' button make the computer start</p><p>'Reset' to clear the board and start again</p>
-    <div>
-    <textarea cols="50" rows="5" id="machine"></textarea>
-    <textarea cols="50" rows="1" id="game_result"></textarea>
-    </div>
-    <div>
-      <button id="start">Play</button>
-      <button id="reset">Reset</button>
-    </div>
+  <!-- <div id="container"> -->
+  <div id="index">
+    <section id="django">
+      <article>
+          <div id="game_description">
+          <h3>An AI programming example using javascript: tictactoe</h3>
+          </div>
+          <div class="wrapper">
+          <div id="board">
+          </div>
+          <div id="panel">
+            <button id="start">Play</button>
+            <button id="reset">Reset</button>
+          </div>
+          <div id="result">
+            <textarea cols="50" rows="5" id="machine" class="comment"></textarea>
+            <textarea cols="50" rows="1" id="game_result" class="comment"></textarea>
+          </div>
+          </div> <!-- end board wrapper -->
+      </article>
+    </section>
   </div>
+  <!-- </div> -->
 </body>
+
 </html>

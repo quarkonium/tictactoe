@@ -1,13 +1,5 @@
-//Copyright 2011 quarkonium http://www.quarkonium.com 
-//Released under the MIT License
-
-body
-{
-  margin: 60px;
-}
-
 #board { align: centre; border:5px solid #333; width: 400px }
-#board td 
+#board td
 {
   background:#fff;
   background:-moz-linear-gradient(top, #fff, #eee);
@@ -20,8 +12,6 @@ body
   vertical-align:middle;
   width:150px;
 }
-
-div { width: 300px; float: left}
 
 #board tr:nth-child(odd) td:nth-child(even),
 #board tr:nth-child(even) td:nth-child(odd) 
@@ -43,7 +33,7 @@ td {
   font-weight: bold;
   font-color: green;
   font-family: geniva, verdana, helvetica;
-  border: 1px solid green;
+  border: 1px solid #494573;
 }
  
 #menu {
@@ -51,7 +41,7 @@ td {
  
 #play_again {
   font-size: 14px;
-  color: green;
+  color: #494573;
 }
 
 div#control_panel
@@ -65,12 +55,33 @@ div#control_panel
 
 button#start, #reset
 {
-  border:none;
+  border:solid 5px;
   padding:4px 4px 4px 4px;
   border-radius:15%; /* Don't expect this to work on IE6 or 7 */
   -moz-border-radius:15%;
   -webkit-border-radius:15%;
-  color: blue;
-  margin-right:10px;
+  color: #494573;
+  /* width: 203px; */
+  /* width: 49%; */
+  width: 49%;
   cursor:pointer;
 }
+
+button#start
+{
+  margin-right: 1px;
+}
+
+button#reset
+{
+  margin-left: 1px;
+}
+
+canvas#simulatorCanvas
+{
+  float: left;
+  border: 1px solid #494573;
+  background-color: #000;
+  margin-right: 10px;
+}
+

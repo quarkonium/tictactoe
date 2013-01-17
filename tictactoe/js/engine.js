@@ -11,10 +11,16 @@ var Engine =
   patterns: [[0,1,2], [3,4,5], [6,7,8], [0,3,6], [1,4,7], [2,5,8], [0,4,8], [6,4,2]],
   play: function(board)
   {
+    if(TicTacToe.gameEnd == true)
+    {
+      TicTacToe.start();
+    }
+
     //Choose the centre
+    this.log(" I'll choose the centre... ");
     board[4]=this.turn;
     return 4;
-  }, 
+  },
   next: function()
   {
     this.sequence_number++;
@@ -29,17 +35,14 @@ var Engine =
     var text = document.getElementById("machine");
     if(t.indexOf("Thinking") != -1)
     {
-      text.value += t + "\n";
+      text.value = t + "\n" + text.value;
     }
     else
     {
-      text.value += this.sequence_number + "." + this.log_number + " " + t + "\n";
+      text.value = this.sequence_number + "." + this.log_number + " " + t 
+                   + "\n" + text.value;
       this.log_number++;
     }
-  },
-  start: function()
-  {
-    this.sequence_number++;
   },
   //returns 0-8 move index
   evaluate: function(board)

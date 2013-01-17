@@ -51,7 +51,6 @@ var TicTacToe =
     this.board = ["", "", "", "", "", "", "", "", "", ""];
     
     this.gameEnd=false;
-
     Engine.next();
 
     //this.clearGameResult();
@@ -61,9 +60,8 @@ var TicTacToe =
       TicTacToe.move( e.target.id );
     });
 
-    $("#reset").click(function () { TicTacToe.start();  });
+    $("#game_result").text("");
 
-    $("#start").bind("click", {board: this.board}, this.play);
   },
   clearGameResult: function()
   {
@@ -110,10 +108,10 @@ var TicTacToe =
     var text = document.getElementById("game_result");
     text.value = t + "\n";
   },
-  endGame: function() 
+  endGame: function()
   {
     var p;
-    if (this.draw()) 
+    if (this.draw())
     {
       $("#game_result").html("Drawn game... have another go!");
       return true;
@@ -138,5 +136,7 @@ var TicTacToe =
  
 $(document).ready(function() 
 {
+    $("#reset").bind("click", function () { TicTacToe.start();  });
+    $("#start").bind("click", {board: TicTacToe.board}, TicTacToe.play);
   TicTacToe.start();
 });
